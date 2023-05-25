@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandController : Singleton<HandController>
+public class PaddleController : Singleton<PaddleController>
 {
     private float currentRotation = 0f;
     private float targetRotation = 90f;
@@ -12,8 +12,8 @@ public class HandController : Singleton<HandController>
     public float rotationSpeed;
 
 
-    public int minX;
-    public int maxX;
+    public float minX;
+    public float maxX;
 
     private bool isRotating = false;
     private bool isMoving = false;
@@ -51,6 +51,7 @@ public class HandController : Singleton<HandController>
             {
                isInsBall = true;
             }
+
         }
         else
         {

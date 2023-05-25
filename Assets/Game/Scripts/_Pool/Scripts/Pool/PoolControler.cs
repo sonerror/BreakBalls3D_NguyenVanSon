@@ -149,53 +149,7 @@ public enum ParticleType
 
 public enum PoolType
 {
-    None,
-
-    Bot,
-
-    W_Hammer_1,
-    W_Hammer_2,
-    W_Hammer_3,
-    W_Candy_1,
-    W_Candy_2,
-    W_Candy_3,
-    W_Boomerang_1,
-    W_Boomerang_2,
-    W_Boomerang_3,
-
-    B_Hammer_1,
-    B_Hammer_2,
-    B_Hammer_3,
-    B_Candy_1,
-    B_Candy_2,
-    B_Candy_3,
-    B_Boomerang_1,
-    B_Boomerang_2,
-    B_Boomerang_3,
-
-    SKIN_Normal,
-    SKIN_Devil,
-    SKIN_Angle,
-    SKIN_Witch,
-    SKIN_Deadpool,
-    SKIN_Thor,
-
-    HAT_Arrow,
-    HAT_Cap,
-    HAT_Cowboy,
-    HAT_Crown,
-    HAT_Ear,
-    HAT_StrawHat,
-    HAT_Headphone,
-    HAT_Horn,
-    HAT_Police,
-
-    ACC_Book,
-    ACC_Captain,
-    ACC_Headphone,
-    ACC_Shield,
-
-    TargetIndicator,
+    none,
 }
 
 
