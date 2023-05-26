@@ -25,7 +25,8 @@ public class BallManager : Singleton<BallManager>
     }
     public void Update()
     {
-        if(PaddleController.Ins.isInsBall)
+        //TEST
+        if (PaddleController.Ins.isInsBall)
         {
             StartCoroutine(SpawnObjects());
         }

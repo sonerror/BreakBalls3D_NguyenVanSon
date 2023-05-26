@@ -13,27 +13,40 @@ public class BallController : GameUnit
     private Vector3 lastFrameVelocity;
     [SerializeField] public Rigidbody rb;
 
-    private void OnEnable()
-    {
-        rb.velocity = initialVelocity;
-    }
+    public float destroyDelay;
 
+    public MaterialType materialType;
+    [SerializeField] protected ColorData colorData;
+    [SerializeField] protected MeshRenderer rendererBall;
+    [SerializeField] protected SkinnedMeshRenderer skinnedRenderer;
+
+    private void Start()
+    {
+        OnInit();
+    }
     private void Update()
     {
         lastFrameVelocity = rb.velocity;
     }
-
+    void OnInit()
+    {
+        rb.velocity = initialVelocity;
+    }
     public virtual void OnCollisionEnter(Collision collision)
     {
-        Bounce(collision.contacts[0].normal);//collision.contacts[0].normal Vector pháp tuyến của lần va chạm đầu tiên
+        Bounce(collision.contacts[0].normal);
     }
-
-    public virtual void Bounce(Vector3 collisionNormal)
+    public void Bounce(Vector3 collisionNormal)
     {
         var speed = lastFrameVelocity.magnitude;
-        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);// Reflect tính toán vector phản xạ của một vector đầu vào dựa trên một vector pháp tuyến cho trước.
-        //Debug.Log("Out Direction: " + direction);
+        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
     }
 
+    public void ChangeColor(MaterialType type)
+    {
+        materialType = type;
+        if (rendererBall != null) rendererBall.material = colorData.GetMat(type);
+        if (skinnedRenderer != null) skinnedRenderer.material = colorData.GetMat(type);
+    }
 }
