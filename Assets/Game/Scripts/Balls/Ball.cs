@@ -16,13 +16,13 @@ public class Ball : BallController
         GameObject collidedObject = collision.gameObject;
         if (collision.gameObject.CompareTag(Constant.TAG_BALL_IMG) )
         {
-/*            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
+            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
 
             Material objectBColor = objectBRenderer.material;
 
             MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
 
-            objectARenderer.material = objectBColor;*/
+            objectARenderer.material = objectBColor;
 
             Invoke(nameof(OnDespawn), destroyDelay);
         }
