@@ -150,6 +150,11 @@ public enum ParticleType
 public enum PoolType
 {
     none,
+    zone,
+    zone1,
+    zone2,
+    zone3,
+    ball,
 }
 
 

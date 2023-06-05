@@ -19,6 +19,7 @@ public class BallController : GameUnit
     [SerializeField] protected ColorData colorData;
     [SerializeField] protected MeshRenderer rendererBall;
     [SerializeField] protected SkinnedMeshRenderer skinnedRenderer;
+    private bool isBounce = false;
 
     private void Start()
     {
@@ -46,7 +47,17 @@ public class BallController : GameUnit
     public void ChangeColor(MaterialType type)
     {
         materialType = type;
-        if (rendererBall != null) rendererBall.material = colorData.GetMat(type);
-        if (skinnedRenderer != null) skinnedRenderer.material = colorData.GetMat(type);
+
+        if (rendererBall != null)
+        {
+            rendererBall.material = colorData.GetMat(type);
+        }
+
+        if (skinnedRenderer != null)
+        {
+            skinnedRenderer.material = colorData.GetMat(type);
+        }
+        
     }
+
 }

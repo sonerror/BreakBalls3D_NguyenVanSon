@@ -148,9 +148,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453628733}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4, y: 66.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 999610061}
+  - {fileID: 1972001739}
   m_Father: {fileID: 1086597454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -167,10 +169,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPf: {fileID: 7655919107951979918, guid: 9e3f8a90704c7324b9ddd8dc73a15b03, type: 3}
-  ballTF: {fileID: 453628734}
+  ballTF: {fileID: 1972001739}
   balls: []
-  totalBalls: 5
+  totalBalls: 10
   spawnInterval: 1
+  zones:
+  - {fileID: 7397207534514302013, guid: a9fbb8c55d3768a4a83ee314e8282035, type: 3}
+  - {fileID: 3531794703744471267, guid: 896a943e92e72f24a9d526e803d1f699, type: 3}
+  - {fileID: -4771723306024708930, guid: 90e3aa38c452b504bb1afa9f02a18f72, type: 3}
+  - {fileID: 4102014935483031891, guid: 0134a6d1cd09d6548a6353702f2e53aa, type: 3}
+  zoneTF: {fileID: 999610061}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +397,7 @@ GameObject:
   - component: {fileID: 844940032}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Wall
+  m_TagString: Wall_Above
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,10 +585,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: 52.6, z: -47}
+  m_LocalPosition: {x: 4, y: 52, z: -47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &999610060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999610061}
+  m_Layer: 0
+  m_Name: TFZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999610061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999610060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 453628734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1048667399
@@ -702,7 +740,7 @@ GameObject:
   - component: {fileID: 1510701263}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Wall
+  m_TagString: Wall_Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,6 +897,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6878499235977768568, guid: ce1c6d2e5329bfd4fa27b41de58c27f9, type: 3}
+      propertyPath: rootBalls
+      value: 
+      objectReference: {fileID: 1954803998}
     - target: {fileID: 6878499235977768570, guid: ce1c6d2e5329bfd4fa27b41de58c27f9, type: 3}
       propertyPath: m_Name
       value: Glass
@@ -976,8 +1018,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImgBalls
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5536066433874335953, guid: 49d1f14a3fce0e740860b74667e69f1e, type: 3}
+      propertyPath: m_Radius
+      value: 0.45
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 459588450272235094, guid: 49d1f14a3fce0e740860b74667e69f1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49d1f14a3fce0e740860b74667e69f1e, type: 3}
+--- !u!4 &1954803998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4778743299725929210, guid: ce1c6d2e5329bfd4fa27b41de58c27f9, type: 3}
+  m_PrefabInstance: {fileID: 1599980960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1972001738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972001739}
+  m_Layer: 0
+  m_Name: Balls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972001739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972001738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 64.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 453628734}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997083195
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +1074,7 @@ GameObject:
   - component: {fileID: 1997083196}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Wall
+  m_TagString: Wall_Below
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,7 +1169,7 @@ GameObject:
   - component: {fileID: 2029437713}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Wall
+  m_TagString: Wall_Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

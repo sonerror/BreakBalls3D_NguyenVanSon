@@ -5,22 +5,25 @@ using UnityEngine;
 public class Ball : BallController
 {
 
+    public void Start()
+    {
+        ChangeColor(MaterialType.white);
+    }
     public override void OnCollisionEnter(Collision collision)
     {
         base.OnCollisionEnter(collision);
 
-        GameObject collidedObject = collision.gameObject;  //UNDONE: đoạn này chưa xong
+        GameObject collidedObject = collision.gameObject;
         if (collision.gameObject.CompareTag(Constant.TAG_BALL_IMG) )
         {
-            //UNDONE: đoạn này chưa xong
-            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
+/*            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
 
             Material objectBColor = objectBRenderer.material;
 
-            MeshRenderer objectARenderer = GetComponent<MeshRenderer>();
+            MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
 
-            objectARenderer.material = objectBColor;
-            //
+            objectARenderer.material = objectBColor;*/
+
             Invoke(nameof(OnDespawn), destroyDelay);
         }
     }

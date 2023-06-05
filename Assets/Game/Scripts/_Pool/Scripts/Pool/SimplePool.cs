@@ -38,7 +38,7 @@ public static class SimplePool
         bool m_collect;
         //list object in pool
         Queue<GameUnit> m_inactive;
-        //collect obj active ingame
+        //collect zones active ingame
         List<GameUnit> m_active;
         // The prefab that we are pooling
         GameUnit m_prefab;
@@ -97,7 +97,7 @@ public static class SimplePool
         // Return an object to the inactive pool.
         public void Despawn(GameUnit obj)
         {
-            if (obj != null /*&& !inactive.Contains(obj)*/)
+            if (obj != null /*&& !inactive.Contains(zones)*/)
             {
                 obj.gameObject.SetActive(false);
                 m_inactive.Enqueue(obj);
@@ -234,7 +234,7 @@ public static class SimplePool
     public static List<GameUnit> GetAllUnitIsActive(PoolType poolType)
     {
         return GetAllUnitIsActive(GetPrefabByType(poolType));
-    }  
+    }
 
     #endregion
 
@@ -274,11 +274,11 @@ public static class SimplePool
         return unit;
     }
 
-    static public T Spawn<T> (PoolType poolType, Vector3 localPoint, Quaternion localRot, Transform parent) where T : GameUnit
+    static public T Spawn<T>(PoolType poolType, Vector3 localPoint, Quaternion localRot, Transform parent) where T : GameUnit
     {
         return Spawn<T>(GetPrefabByType(poolType), localPoint, localRot, parent);
     }
-     static public T Spawn<T> (PoolType poolType, Transform parent) where T : GameUnit
+    static public T Spawn<T>(PoolType poolType, Transform parent) where T : GameUnit
     {
         return Spawn<T>(GetPrefabByType(poolType), parent);
     }

@@ -6,7 +6,7 @@ public class BallStatic : BallController
 {
     public void Start()
     {
-        ChangeColor(MaterialType.blue);
+        ChangeColor(MaterialType.red);
     }
     public override void OnCollisionEnter(Collision collisionInfo)
     {

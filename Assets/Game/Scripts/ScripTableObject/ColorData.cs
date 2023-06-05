@@ -4,11 +4,10 @@ using UnityEngine;
 
 public enum MaterialType
 {
-
     red = 0,
     green = 1,
     blue = 2,
-    whiten = 3,
+    white = 3,
 }
 
 [CreateAssetMenu(fileName = "ColorData", menuName = "ScriptableObjects/ColorData", order = 1)]
