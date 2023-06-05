@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class BallStatic : BallController
 {
-    public void Start()
-    {
-        ChangeColor(MaterialType.red);
-    }
     public override void OnCollisionEnter(Collision collisionInfo)
     {
         base.OnCollisionEnter(collisionInfo);
@@ -28,5 +24,8 @@ public class BallStatic : BallController
     {
         SimplePool.Despawn(this);
     }
-
+    public void Init(Transform containerTransform)
+    {
+        this.transform.SetParent(containerTransform);
+    }
 }

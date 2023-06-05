@@ -7,7 +7,7 @@ public class Ball : BallController
 
     public void Start()
     {
-        ChangeColor(MaterialType.white);
+        
     }
     public override void OnCollisionEnter(Collision collision)
     {
