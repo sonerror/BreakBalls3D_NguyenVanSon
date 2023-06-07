@@ -17,7 +17,7 @@ public class PaddleController : Singleton<PaddleController>
     public float maxX;
 
     private bool isRotating = false;
-    private bool isMoving = false;
+    public bool isMoving = false;
 
     public bool isInsBall =  false;
     private void Start()
@@ -53,6 +53,7 @@ public class PaddleController : Singleton<PaddleController>
             transform.rotation = Quaternion.Euler(0f, 0f, -currentRotation);
 
             MoveHand();
+
             if (currentRotation > 80)
             {
                isInsBall = true;

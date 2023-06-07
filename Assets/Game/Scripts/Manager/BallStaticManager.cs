@@ -13,46 +13,44 @@ public class BallStaticManager : Singleton<BallStaticManager>
     private int maxCols = 60;
     public Transform bricksContainer;
     private float initialBallSpawnPositionX = 0f;
-    private float initialBallSpawnPositionY = 45f;
+    private float initialBallSpawnPositionY = 50f;
     private float shiftAmount = 1f;
-    public MaterialType materialType; 
 
-    public BallStatic brickPrefab;
+    public BallStatic ballPrefab;
 
     public List<BallStatic> RemainingBalls { get; set; }
 
     public List<int[,]> LevelsData { get; set; }
 
-    public int InitialBricksCount { get; set; }
+    public int InitialBallStaticCount { get; set; }
 
-    public int CurrentLevel;
+    public int currentLevel;
 
     private void Start()
     {
+        Debug.Log(currentLevel);
         levelDatas = new List<int[,]>();
-        LevelsData = new List<int[,]>();    
+        LevelsData = new List<int[,]>();
         levelDatas = LoadLevelsData();
         this.LevelsData = this.LoadLevelsData();
         this.GenerateBalls();
     }
-
+    private void Update()
+    {
+        this.InitialBallStaticCount = this.RemainingBalls.Count;
+    }
     public void LoadNextLevel()
     {
-        this.CurrentLevel++;
-
-        if (this.CurrentLevel >= this.LevelsData.Count)
+        this.currentLevel++;
+        if (this.currentLevel >= this.LevelsData.Count)
         {
-            GameManager.Ins.ShowVictoryScreen();
+            GameManager.Ins.UIVictory();
         }
-        else
-        {
-            this.LoadLevel(this.CurrentLevel);
-        }
+        this.LoadLevel(this.currentLevel);
     }
-
     public void LoadLevel(int level)
     {
-        this.CurrentLevel = level;
+        this.currentLevel = level;
         this.ClearRemainingBalls();
         this.GenerateBalls();
     }
@@ -64,19 +62,17 @@ public class BallStaticManager : Singleton<BallStaticManager>
             Destroy(ballStatic.gameObject);
         }
     }
-
     private void GenerateBalls()
     {
         this.RemainingBalls = new List<BallStatic>();
 
-        int[,] currentLevelData = this.LevelsData[this.CurrentLevel];
+        int[,] currentLevelData = this.LevelsData[this.currentLevel];
 
         float currentSpawnX = initialBallSpawnPositionX;
 
         float currentSpawnY = initialBallSpawnPositionY;
 
         float zShift = 0;
-        
 
         for (int row = 0; row < this.maxRows; row++)
         {
@@ -86,9 +82,11 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
                 if (BallType > 0)
                 {
-                    BallStatic newBall = Instantiate(brickPrefab, new Vector3(currentSpawnX, currentSpawnY, 0.0f - zShift), Quaternion.identity) as BallStatic;
-
+                    BallStatic newBall = Instantiate(ballPrefab, new Vector3(currentSpawnX, currentSpawnY, 0.0f - zShift), Quaternion.identity) as BallStatic;
+                   
                     newBall.Init(bricksContainer.transform);
+
+                    SetBallColor(newBall, BallType);
 
                     this.RemainingBalls.Add(newBall);
 
@@ -105,11 +103,27 @@ public class BallStaticManager : Singleton<BallStaticManager>
             currentSpawnY -= shiftAmount;
         }
 
-        this.InitialBricksCount = this.RemainingBalls.Count;
+        this.InitialBallStaticCount = this.RemainingBalls.Count;
 
         OnLevelLoaded?.Invoke();
-    }
 
+    }
+    private void SetBallColor(BallStatic ball, int ballType)
+    {
+        Dictionary<int, MaterialType> ballTypeToMaterialType = new Dictionary<int, MaterialType>()
+            {
+                { 1, MaterialType.blue },
+                { 2, MaterialType.red },
+                { 3, MaterialType.yellow },
+                { 4, MaterialType.white },
+                { 5, MaterialType.Black }
+            };
+
+        if (ballTypeToMaterialType.TryGetValue(ballType, out MaterialType materialType))
+        {
+            ball.ChangeColor(materialType);
+        }
+    }
     private List<int[,]> LoadLevelsData()
     {
         TextAsset text = Resources.Load("levels") as TextAsset;
@@ -144,7 +158,7 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
                 currentLevel = new int[maxRows, maxCols];
             }
-        }   
+        }
         return levelsData;
     }
 }

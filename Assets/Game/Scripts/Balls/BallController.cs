@@ -16,10 +16,13 @@ public class BallController : GameUnit
     public float destroyDelay;
 
     public MaterialType materialType;
+    public int Hitpoints = 1;
     [SerializeField] protected ColorData colorData;
     [SerializeField] protected MeshRenderer rendererBall;
     [SerializeField] protected SkinnedMeshRenderer skinnedRenderer;
-    private bool isBounce = false;
+
+    public bool isBounce = false;
+    public bool isBallMoving = false;
 
     private void Start()
     {
@@ -40,8 +43,11 @@ public class BallController : GameUnit
     public void Bounce(Vector3 collisionNormal)
     {
         var speed = lastFrameVelocity.magnitude;
+
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
+
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
+
     }
 
     public void ChangeColor(MaterialType type)
@@ -52,12 +58,13 @@ public class BallController : GameUnit
         {
             rendererBall.material = colorData.GetMat(type);
         }
-
         if (skinnedRenderer != null)
         {
             skinnedRenderer.material = colorData.GetMat(type);
         }
-        
     }
-
+    public virtual void OnDespawn()
+    {
+        SimplePool.Despawn(this);
+    }
 }

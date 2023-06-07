@@ -8,6 +8,8 @@ public enum MaterialType
     green = 1,
     blue = 2,
     white = 3,
+    yellow = 4,
+    Black = 5,
 }
 
 [CreateAssetMenu(fileName = "ColorData", menuName = "ScriptableObjects/ColorData", order = 1)]

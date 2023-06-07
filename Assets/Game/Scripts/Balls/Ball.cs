@@ -4,31 +4,47 @@ using UnityEngine;
 
 public class Ball : BallController
 {
+    private int numberBallSpawn = 2;
 
-    public void Start()
-    {
-        
-    }
     public override void OnCollisionEnter(Collision collision)
     {
         base.OnCollisionEnter(collision);
 
         GameObject collidedObject = collision.gameObject;
+
         if (collision.gameObject.CompareTag(Constant.TAG_BALL_IMG) )
         {
-            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
+            if(isBallMoving == true)
+            {
+                Debug.Log("hit 0");
+                MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
 
-            Material objectBColor = objectBRenderer.material;
+                Material objectBColor = objectBRenderer.material;
 
-            MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
+                MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
 
-            objectARenderer.material = objectBColor;
-
+                objectARenderer.material = objectBColor;
+            }
             Invoke(nameof(OnDespawn), destroyDelay);
         }
     }
-    public void OnDespawn()
+    private void OnTriggerEnter(Collider other)
     {
-        SimplePool.Despawn(this);
+        if (other.gameObject.CompareTag(Constant.TAG_ZONE))
+        {
+            Vector3 spawnPosition = gameObject.transform.position - new Vector3(0f, 2f, 0f);
+
+            BallManager.Ins.ZoneSpawnBalls(numberBallSpawn, spawnPosition);
+
+            OnDespawn();
+
+        }
+    }
+    public override void OnDespawn()
+    {
+        base.OnDespawn();
+
+        BallManager.Ins.balls.Remove(this);
+        
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Wall_Above
   - Wall_Right
   - Wall_Below
+  - Zone
   layers:
   - Default
   - TransparentFX

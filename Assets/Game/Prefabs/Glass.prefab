@@ -1071,6 +1071,7 @@ MonoBehaviour:
   rotationSpeed: 5
   minX: -2
   maxX: 2
+  isMoving: 0
   isInsBall: 0
 --- !u!1 &6878499235999276429
 GameObject:
