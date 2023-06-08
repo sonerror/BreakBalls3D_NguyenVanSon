@@ -8,19 +8,17 @@ public class BallStatic : BallController
     public override void OnCollisionEnter(Collision collisionInfo)
     {
         base.OnCollisionEnter(collisionInfo);
-        Debug.Log(isBallMoving + "?hit");
+
         if (collisionInfo.gameObject.CompareTag(Constant.TAG_BALL))
         {
             rb.isKinematic = false;
-            rb.useGravity = true;
 
-            isBallMoving = true;
-            Debug.Log(isBallMoving + "hit?");
-            BallStaticManager.Ins.RemainingBalls.Remove(this);
+            rb.useGravity = true;
         }
         if(collisionInfo.gameObject.CompareTag(Constant.TAG_WALL))
         {
             Invoke(nameof(OnDespawn), destroyDelay);
+            BallStaticManager.Ins.RemainingBalls.Remove(this);
         }
     }
 

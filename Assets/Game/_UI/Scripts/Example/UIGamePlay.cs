@@ -9,8 +9,8 @@ public class UIGamePlay : UICanvas
     public Text numberBall;
     public void Update()
     {
-        numberLevel.text = BallStaticManager.Ins.currentLevel.ToString();
-        numberBall.text = BallManager.Ins.totalBalls.ToString();
+        numberLevel.text = (LevelManager.Ins.currentLevel + 1).ToString();
+        numberBall.text = LevelManager.Ins.totalBalls.ToString();
     }
 
 }

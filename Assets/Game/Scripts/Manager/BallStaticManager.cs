@@ -9,8 +9,6 @@ public class BallStaticManager : Singleton<BallStaticManager>
 {
     public static event Action OnLevelLoaded;
     [SerializeField] private List<int[,]> levelDatas;
-    private int maxRows = 50;
-    private int maxCols = 60;
     public Transform bricksContainer;
     private float initialBallSpawnPositionX = 0f;
     private float initialBallSpawnPositionY = 50f;
@@ -24,49 +22,32 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
     public int InitialBallStaticCount { get; set; }
 
-    public int currentLevel;
 
     private void Start()
     {
-        Debug.Log(currentLevel);
         levelDatas = new List<int[,]>();
         LevelsData = new List<int[,]>();
-        levelDatas = LoadLevelsData();
-        this.LevelsData = this.LoadLevelsData();
+        levelDatas = LevelManager.Ins.LoadLevelsData();
+        this.LevelsData = LevelManager.Ins.LoadLevelsData();
         this.GenerateBalls();
     }
     private void Update()
     {
         this.InitialBallStaticCount = this.RemainingBalls.Count;
     }
-    public void LoadNextLevel()
-    {
-        this.currentLevel++;
-        if (this.currentLevel >= this.LevelsData.Count)
-        {
-            GameManager.Ins.UIVictory();
-        }
-        this.LoadLevel(this.currentLevel);
-    }
-    public void LoadLevel(int level)
-    {
-        this.currentLevel = level;
-        this.ClearRemainingBalls();
-        this.GenerateBalls();
-    }
 
-    private void ClearRemainingBalls()
+    public void ClearRemainingBalls()
     {
         foreach (BallStatic ballStatic in this.RemainingBalls.ToList())
         {
             Destroy(ballStatic.gameObject);
         }
     }
-    private void GenerateBalls()
+    public void GenerateBalls()
     {
         this.RemainingBalls = new List<BallStatic>();
 
-        int[,] currentLevelData = this.LevelsData[this.currentLevel];
+        int[,] currentLevelData = this.LevelsData[LevelManager.Ins.currentLevel];
 
         float currentSpawnX = initialBallSpawnPositionX;
 
@@ -74,9 +55,9 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
         float zShift = 0;
 
-        for (int row = 0; row < this.maxRows; row++)
+        for (int row = 0; row < LevelManager.Ins.maxRows; row++)
         {
-            for (int col = 0; col < this.maxCols; col++)
+            for (int col = 0; col < LevelManager.Ins.maxCols; col++)
             {
                 int BallType = currentLevelData[row, col];
 
@@ -95,7 +76,7 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
                 currentSpawnX += shiftAmount;
 
-                if (col + 1 == this.maxCols)
+                if (col + 1 == LevelManager.Ins.maxCols)
                 {
                     currentSpawnX = initialBallSpawnPositionX;
                 }
@@ -123,42 +104,5 @@ public class BallStaticManager : Singleton<BallStaticManager>
         {
             ball.ChangeColor(materialType);
         }
-    }
-    private List<int[,]> LoadLevelsData()
-    {
-        TextAsset text = Resources.Load("levels") as TextAsset;
-
-        string[] rows = text.text.Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-        List<int[,]> levelsData = new List<int[,]>();
-
-        int[,] currentLevel = new int[maxRows, maxCols];
-
-        int currentRow = 0;
-
-        for (int row = 0; row < rows.Length; row++)
-        {
-            string line = rows[row];
-
-            if (line.IndexOf("--") == -1)
-            {
-                string[] balls = line.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-
-                for (int col = 0; col < balls.Length; col++)
-                {
-                    currentLevel[currentRow, col] = int.Parse(balls[col]);
-                }
-                currentRow++;
-            }
-            else
-            {
-                currentRow = 0;
-
-                levelsData.Add(currentLevel);
-
-                currentLevel = new int[maxRows, maxCols];
-            }
-        }
-        return levelsData;
     }
 }

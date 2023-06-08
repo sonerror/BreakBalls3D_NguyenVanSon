@@ -6,8 +6,10 @@ public class BallController : GameUnit
 {
     [SerializeField]
     private Vector3 initialVelocity;
+    private Vector3 direction;
+    private float speed;
 
-    [SerializeField]
+   [SerializeField]
     private float minVelocity = 10f;
 
     private Vector3 lastFrameVelocity;
@@ -15,18 +17,20 @@ public class BallController : GameUnit
 
     public float destroyDelay;
 
+    public bool hasCollided;
+
     public MaterialType materialType;
     public int Hitpoints = 1;
     [SerializeField] protected ColorData colorData;
     [SerializeField] protected MeshRenderer rendererBall;
     [SerializeField] protected SkinnedMeshRenderer skinnedRenderer;
 
-    public bool isBounce = false;
-    public bool isBallMoving = false;
+    public bool hasStarted = false;
 
     private void Start()
     {
         OnInit();
+        hasStarted = false;
     }
     private void Update()
     {
@@ -38,13 +42,21 @@ public class BallController : GameUnit
     }
     public virtual void OnCollisionEnter(Collision collision)
     {
-        Bounce(collision.contacts[0].normal);
+        if (!hasStarted)
+        {
+            hasStarted = true;
+        }
+        else
+        {
+            speed += 30f;
+            Bounce(collision.contacts[0].normal);
+        }
     }
     public void Bounce(Vector3 collisionNormal)
     {
-        var speed = lastFrameVelocity.magnitude;
+        speed = lastFrameVelocity.magnitude;
 
-        var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
+        direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
 
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
 

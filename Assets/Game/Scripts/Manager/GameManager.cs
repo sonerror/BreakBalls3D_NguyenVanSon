@@ -26,12 +26,10 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         UIStart();
-
     }
     public void Update()
     {
         UINextLevel();
-        Debug.Log(BallStaticManager.Ins.InitialBallStaticCount);
     }
     public void RestartGame()
     {

@@ -12,19 +12,17 @@ public class Ball : BallController
 
         GameObject collidedObject = collision.gameObject;
 
-        if (collision.gameObject.CompareTag(Constant.TAG_BALL_IMG) )
+        if (collision.gameObject.CompareTag(Constant.TAG_BALL_IMG))
         {
-            if(isBallMoving == true)
-            {
-                Debug.Log("hit 0");
-                MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
 
-                Material objectBColor = objectBRenderer.material;
+            MeshRenderer objectBRenderer = collidedObject.GetComponent<MeshRenderer>();
 
-                MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
+            Material objectBColor = objectBRenderer.material;
 
-                objectARenderer.material = objectBColor;
-            }
+            MeshRenderer objectARenderer = rendererBall.GetComponent<MeshRenderer>();
+
+            objectARenderer.material = objectBColor;
+
             Invoke(nameof(OnDespawn), destroyDelay);
         }
     }
@@ -45,6 +43,6 @@ public class Ball : BallController
         base.OnDespawn();
 
         BallManager.Ins.balls.Remove(this);
-        
+
     }
 }

@@ -6,6 +6,7 @@ public class UINextLevel : UICanvas
 {
     public void BtnNextLevel()
     {
-        BallStaticManager.Ins.LoadNextLevel();
+        CloseDirectly();
+        LevelManager.Ins.LoadNextLevel();
     }
 }

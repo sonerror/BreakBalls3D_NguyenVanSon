@@ -10,27 +10,25 @@ public class BallManager : Singleton<BallManager>
     public Ball ballZonePf;
     public Transform ballTF;
     public List<Ball> balls = new List<Ball>();
-    public int totalBalls;
     public float spawnInterval;
     [SerializeField] private SpawnZone[] zones;
     public Transform zoneTF;
     private Ball initialBall;
 
-    void OnInit()
+    public float ballSpawnInterval = 2;
+
+    public void OnInit()
     {
-        SpawnTotalBalls(totalBalls);
-        ZoneSpawn();
+        SpawnTotalBalls(LevelManager.Ins.totalBalls);
     }
     private void Update()
     {
-        if(PaddleController.Ins.isInsBall == true)
-        {
-            SpawnBalls();
-        }
+        InsBall();
     }
     private void Start()
     {
         OnInit();
+        ZoneSpawn();
     }
     private void ZoneSpawn()
     {
@@ -50,7 +48,6 @@ public class BallManager : Singleton<BallManager>
             balls.Add(ball);
         }
     }
-
     private void SpawnBalls()
     {
         Vector3 paddlePosition = PaddleController.Ins.gameObject.transform.position;
@@ -66,7 +63,47 @@ public class BallManager : Singleton<BallManager>
         for (int i = 0; i < totalBalls; i++)
         {
             Ball ball = Instantiate(ballZonePf, spawnPosition,Quaternion.identity);
+            ball.transform.SetParent(ballTF);
+            ball.rb.velocity = Vector3.down * 100f;
+
         }
     }
 
+    private void InsBall()
+    {
+        if(PaddleController.Ins.isRotating)
+        {
+            if(PaddleController.Ins.isInsBall)
+            {
+                StartCoroutine(SpawnBallsCoroutine());
+            }
+        }
+    }
+    private IEnumerator SpawnBallsCoroutine()
+    {
+        PaddleController.Ins.isInsBall = true;
+
+        while (PaddleController.Ins.isRotating)
+        {
+            Vector3 paddlePosition = PaddleController.Ins.gameObject.transform.position;
+
+            Vector3 startingPosition = new Vector3(paddlePosition.x+2f, paddlePosition.y, 0);
+
+            for (int i = 0; i < balls.Count; i++)
+            {
+                balls[i].gameObject.SetActive(true);
+
+                balls[i].transform.position = startingPosition;
+
+                balls[i].rb.velocity = Vector3.down * 10f;
+            }
+            yield return new WaitForSeconds(ballSpawnInterval);
+        }
+
+        PaddleController.Ins.isInsBall = false;
+    }
+    public void ClearBalls()
+    {
+        balls.Clear();
+    }
 }

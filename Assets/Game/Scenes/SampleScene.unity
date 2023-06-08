@@ -229,7 +229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bricksContainer: {fileID: 18432980}
   ballPrefab: {fileID: 8098631728707724176, guid: d4292344266c6f4459ad7c56a306ace9, type: 3}
-  currentLevel: 3
 --- !u!1001 &414249600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,7 +335,6 @@ MonoBehaviour:
   ballZonePf: {fileID: 7655919107951979918, guid: 9e3f8a90704c7324b9ddd8dc73a15b03, type: 3}
   ballTF: {fileID: 1972001739}
   balls: []
-  totalBalls: 10
   spawnInterval: 1
   zones:
   - {fileID: 7397207534514302013, guid: a9fbb8c55d3768a4a83ee314e8282035, type: 3}
@@ -344,6 +342,7 @@ MonoBehaviour:
   - {fileID: -4771723306024708930, guid: 90e3aa38c452b504bb1afa9f02a18f72, type: 3}
   - {fileID: 4102014935483031891, guid: 0134a6d1cd09d6548a6353702f2e53aa, type: 3}
   zoneTF: {fileID: 999610061}
+  ballSpawnInterval: 0.5
 --- !u!1 &554272820
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,13 +431,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554272820}
-  m_LocalRotation: {x: -0, y: -0, z: -0.258819, w: 0.9659259}
-  m_LocalPosition: {x: 14.296471, y: 27.248465, z: -0.109497786}
-  m_LocalScale: {x: 2, y: 3, z: 5}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 15, y: 25, z: -0.109497786}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 587891137}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!1 &587891136
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048667400}
+  - component: {fileID: 1048667401}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -977,6 +977,22 @@ Transform:
   m_Father: {fileID: 1086597454}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048667401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048667399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34682d061d9d4345a527c1c5945c545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalBalls: 1
+  maxRows: 50
+  maxCols: 60
+  currentLevel: 3
 --- !u!1 &1086597453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,13 +1147,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326151865}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: -14.403528, y: 27.248465, z: -0.109497786}
-  m_LocalScale: {x: 2, y: 3, z: 5}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -15, y: 25, z: -0.109497786}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 587891137}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!1 &1510701262
 GameObject:
   m_ObjectHideFlags: 0

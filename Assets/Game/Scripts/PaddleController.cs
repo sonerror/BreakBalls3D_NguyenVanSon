@@ -16,9 +16,8 @@ public class PaddleController : Singleton<PaddleController>
     public float minX;
     public float maxX;
 
-    private bool isRotating = false;
+    public bool isRotating = false;
     public bool isMoving = false;
-
     public bool isInsBall =  false;
     private void Start()
     {
@@ -53,18 +52,22 @@ public class PaddleController : Singleton<PaddleController>
             transform.rotation = Quaternion.Euler(0f, 0f, -currentRotation);
 
             MoveHand();
-
-            if (currentRotation > 80)
-            {
-               isInsBall = true;
-            }
-
         }
         else
         {
             isInsBall = false;
 
             transform.rotation = initialRotation;
+        }
+        if (currentRotation >= 80)
+        {
+            isRotating = true;
+            isInsBall= true;
+        }
+        else
+        {
+            isInsBall = false;
+            isRotating = false;
         }
     }
     void MoveHand()
@@ -78,9 +81,6 @@ public class PaddleController : Singleton<PaddleController>
             float clampedPositionX = Mathf.Clamp(newPositionX, minX, maxX);
 
             transform.position = new Vector3(clampedPositionX, transform.position.y, transform.position.z);
-/*
-            rootBalls.transform.position = new Vector3(clampedPositionX, transform.position.y, transform.position.z);
-            rootBalls.gameObject.transform.SetParent(null);*/
         }
     }
 }
