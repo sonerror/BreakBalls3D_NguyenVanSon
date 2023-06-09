@@ -15,14 +15,9 @@ public class LevelManager : Singleton<LevelManager>
     public void LoadNextLevel()
     {
         this.currentLevel++;
-        // totalBalls += 5;
-
-        //BallManager.Ins.SpawnTotalBalls(totalBalls);
-
         if (this.currentLevel >= BallStaticManager.Ins.LevelsData.Count)
         {
             GameManager.Ins.UIVictory();
-
         }
         else
         {
@@ -31,11 +26,15 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void LoadLevel(int level)
     {
+        ResetLevel();
         this.currentLevel = level;
-
-        BallStaticManager.Ins.ClearRemainingBalls();
-
         BallStaticManager.Ins.GenerateBalls();
+        BallManager.Ins.countBall = 40;
+    }
+    public void ResetLevel()
+    {
+        BallManager.Ins.ClearBalls();
+        BallStaticManager.Ins.ClearRemainingBalls();
     }
     public List<int[,]> LoadLevelsData()
     {

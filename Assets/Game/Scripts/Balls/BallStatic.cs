@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class BallStatic : BallController
 {
+    /*   public override void OnCollisionEnter(Collision collisionInfo)
+       {
+           base.OnCollisionEnter(collisionInfo);
 
-    public override void OnCollisionEnter(Collision collisionInfo)
+           if (collisionInfo.gameObject.CompareTag(Constant.TAG_BALL))
+           {
+               rb.isKinematic = false;
+
+               rb.useGravity = true;
+           }
+           if (collisionInfo.gameObject.CompareTag(Constant.TAG_WALL))
+           {
+               Invoke(nameof(OnDespawn), destroyDelay);
+               BallStaticManager.Ins.RemainingBalls.Remove(this);
+           }
+       }*/
+    public override void OnTriggerEnter(Collider other)
     {
-        base.OnCollisionEnter(collisionInfo);
+        base.OnTriggerEnter(other);
 
-        if (collisionInfo.gameObject.CompareTag(Constant.TAG_BALL))
+        if (other.CompareTag(Constant.TAG_BALL))
         {
             rb.isKinematic = false;
 
             rb.useGravity = true;
         }
-        if(collisionInfo.gameObject.CompareTag(Constant.TAG_WALL))
+        if (other.CompareTag(Constant.TAG_WALL))
         {
             Invoke(nameof(OnDespawn), destroyDelay);
             BallStaticManager.Ins.RemainingBalls.Remove(this);

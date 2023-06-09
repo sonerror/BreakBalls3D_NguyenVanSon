@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BallController : GameUnit
 {
@@ -9,8 +11,8 @@ public class BallController : GameUnit
     private Vector3 direction;
     private float speed;
 
-   [SerializeField]
-    private float minVelocity = 10f;
+    [SerializeField]
+    private float minVelocity;
 
     private Vector3 lastFrameVelocity;
     [SerializeField] public Rigidbody rb;
@@ -40,7 +42,8 @@ public class BallController : GameUnit
     {
         rb.velocity = initialVelocity;
     }
-    public virtual void OnCollisionEnter(Collision collision)
+
+ /*   public virtual void OnCollisionEnter(Collision collision)
     {
         if (!hasStarted)
         {
@@ -60,8 +63,27 @@ public class BallController : GameUnit
 
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
 
-    }
+    }*/
+    public virtual void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag(Constant.TAG_ZONE_SPAWN))
+        {
+            Vector3 moveDirection = rb.velocity.normalized;
 
+            Ray ray = new Ray(other.ClosestPoint(transform.position), moveDirection);
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Vector3 collisionNormal = -hit.normal;
+
+                Vector3 reflectedDirection = Vector3.Reflect(moveDirection, collisionNormal);
+
+                rb.velocity = reflectedDirection.normalized * rb.velocity.magnitude;
+            }
+        }
+    }
     public void ChangeColor(MaterialType type)
     {
         materialType = type;
@@ -79,4 +101,5 @@ public class BallController : GameUnit
     {
         SimplePool.Despawn(this);
     }
+
 }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class PaddleController : Singleton<PaddleController>
 {
@@ -18,7 +17,7 @@ public class PaddleController : Singleton<PaddleController>
 
     public bool isRotating = false;
     public bool isMoving = false;
-    public bool isInsBall =  false;
+    public bool isInsBall = false;
     private void Start()
     {
         initialRotation = transform.rotation;
@@ -61,10 +60,9 @@ public class PaddleController : Singleton<PaddleController>
         }
         if (currentRotation >= 80)
         {
-            isRotating = true;
-            isInsBall= true;
+            isInsBall = true;
         }
-        else
+        else if(BallManager.Ins.countBall <= 0)
         {
             isInsBall = false;
             isRotating = false;
@@ -72,7 +70,7 @@ public class PaddleController : Singleton<PaddleController>
     }
     void MoveHand()
     {
-       if(isMoving)
+        if (isMoving)
         {
             Vector3 mouseDelta = new Vector3(Input.GetAxis("Mouse X"), 0f, 0f);
 

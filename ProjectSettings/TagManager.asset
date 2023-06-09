@@ -8,10 +8,11 @@ TagManager:
   - Ball
   - Ball1
   - Wall_Left
-  - Wall_Above
   - Wall_Right
-  - Wall_Below
   - Zone
+  - Wall_Down
+  - Wall_Top
+  - Zone1
   layers:
   - Default
   - TransparentFX

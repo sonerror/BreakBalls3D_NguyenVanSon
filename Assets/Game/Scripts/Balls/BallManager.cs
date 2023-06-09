@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.Rendering.VirtualTexturing.Debugging;
 
 public class BallManager : Singleton<BallManager>
 {
@@ -13,23 +12,41 @@ public class BallManager : Singleton<BallManager>
     public float spawnInterval;
     [SerializeField] private SpawnZone[] zones;
     public Transform zoneTF;
-    private Ball initialBall;
+    public int countBall;
+    public float spawnDelay = 1f;
 
-    public float ballSpawnInterval = 2;
+    private float spawnBallTimer = 0f;
+    private float spawnBallTime = 0.5f;
 
     public void OnInit()
     {
         SpawnTotalBalls(LevelManager.Ins.totalBalls);
     }
-    private void Update()
-    {
-        InsBall();
-    }
     private void Start()
     {
-        OnInit();
         ZoneSpawn();
+        countBall = 40;
     }
+    private void Update()
+    {
+        if (PaddleController.Ins.isInsBall)
+        {
+            spawnBallTimer += Time.deltaTime;
+            if (spawnBallTimer >= spawnBallTime)
+            {
+               if(countBall > 0)
+                {
+                    spawnBallTimer = 0f;
+                    SpawnBall();
+                }
+            }
+        }
+        else
+        {
+            spawnBallTimer = spawnBallTime;
+        }
+    }
+
     private void ZoneSpawn()
     {
         for (int i = 0; i < zones.Length; i++)
@@ -48,62 +65,38 @@ public class BallManager : Singleton<BallManager>
             balls.Add(ball);
         }
     }
-    private void SpawnBalls()
-    {
-        Vector3 paddlePosition = PaddleController.Ins.gameObject.transform.position;
-        Vector3 startingPosition = new Vector3(paddlePosition.x, paddlePosition.y, 0);
-        for (int i = 0; i < balls.Count; i++)
-        {
-            balls[i].transform.position = startingPosition;
-            balls[i].gameObject.SetActive(true);
-        }
-    }
     public void ZoneSpawnBalls(int totalBalls, Vector3 spawnPosition)
     {
         for (int i = 0; i < totalBalls; i++)
         {
-            Ball ball = Instantiate(ballZonePf, spawnPosition,Quaternion.identity);
+            Ball ball = Instantiate(ballZonePf, spawnPosition, Quaternion.identity);
             ball.transform.SetParent(ballTF);
-            ball.rb.velocity = Vector3.down * 100f;
-
+            balls.Add(ball);
         }
     }
-
-    private void InsBall()
+    public void SpawnBall()
     {
-        if(PaddleController.Ins.isRotating)
-        {
-            if(PaddleController.Ins.isInsBall)
-            {
-                StartCoroutine(SpawnBallsCoroutine());
-            }
-        }
-    }
-    private IEnumerator SpawnBallsCoroutine()
-    {
-        PaddleController.Ins.isInsBall = true;
+        Vector3 paddlePosition = PaddleController.Ins.gameObject.transform.position;
 
-        while (PaddleController.Ins.isRotating)
-        {
-            Vector3 paddlePosition = PaddleController.Ins.gameObject.transform.position;
+        Vector3 startingPosition = new Vector3(paddlePosition.x + 1.6f, paddlePosition.y, 0);
 
-            Vector3 startingPosition = new Vector3(paddlePosition.x+2f, paddlePosition.y, 0);
+        Ball ball = SimplePool.Spawn<Ball>(ballPf);
 
-            for (int i = 0; i < balls.Count; i++)
-            {
-                balls[i].gameObject.SetActive(true);
+        ball.gameObject.SetActive(true);
 
-                balls[i].transform.position = startingPosition;
+        ball.transform.SetParent(ballTF);
 
-                balls[i].rb.velocity = Vector3.down * 10f;
-            }
-            yield return new WaitForSeconds(ballSpawnInterval);
-        }
+        balls.Add(ball);
+        ball.transform.position = startingPosition;
 
-        PaddleController.Ins.isInsBall = false;
+        countBall -= 1;
     }
     public void ClearBalls()
     {
-        balls.Clear();
+        foreach(Ball ball in balls)
+        {
+            SimplePool.Despawn(ball);
+        }
     }
+
 }

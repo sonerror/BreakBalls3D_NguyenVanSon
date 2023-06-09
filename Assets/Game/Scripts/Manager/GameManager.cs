@@ -26,6 +26,10 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         UIStart();
+        if (!PlayerPrefs.HasKey(Pref.SCORE_KEY))
+        {
+            Pref.Score = 0;
+        }
     }
     public void Update()
     {
@@ -35,15 +39,19 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+
     public void UINextLevel()
     {
-        if(BallStaticManager.Ins.InitialBallStaticCount <= 0)
+        if (BallStaticManager.Ins.InitialBallStaticCount <= 0)
         {
             UIManager.Ins.OpenUI<UINextLevel>();
+
         }
     }
     public void UIVictory()
     {
+
         UIManager.Ins.OpenUI<UIVictory>();
     }
     void UIStart()

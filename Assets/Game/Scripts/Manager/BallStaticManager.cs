@@ -12,7 +12,7 @@ public class BallStaticManager : Singleton<BallStaticManager>
     public Transform bricksContainer;
     private float initialBallSpawnPositionX = 0f;
     private float initialBallSpawnPositionY = 50f;
-    private float shiftAmount = 1f;
+    private float shiftAmount = 1.1f;
 
     public BallStatic ballPrefab;
 
@@ -38,10 +38,7 @@ public class BallStaticManager : Singleton<BallStaticManager>
 
     public void ClearRemainingBalls()
     {
-        foreach (BallStatic ballStatic in this.RemainingBalls.ToList())
-        {
-            Destroy(ballStatic.gameObject);
-        }
+        RemainingBalls.Clear();
     }
     public void GenerateBalls()
     {
