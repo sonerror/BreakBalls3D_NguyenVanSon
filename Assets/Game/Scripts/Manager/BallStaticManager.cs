@@ -12,7 +12,7 @@ public class BallStaticManager : Singleton<BallStaticManager>
     public Transform bricksContainer;
     private float initialBallSpawnPositionX = 0f;
     private float initialBallSpawnPositionY = 50f;
-    private float shiftAmount = 1.1f;
+    private float shiftAmount = 1.15f;
 
     public BallStatic ballPrefab;
 

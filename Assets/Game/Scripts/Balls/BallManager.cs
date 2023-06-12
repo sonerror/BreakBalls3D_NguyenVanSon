@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class BallManager : Singleton<BallManager>
 {
     public Ball ballPf;
-    public Ball ballZonePf;
     public Transform ballTF;
     public List<Ball> balls = new List<Ball>();
     public float spawnInterval;
@@ -69,7 +68,7 @@ public class BallManager : Singleton<BallManager>
     {
         for (int i = 0; i < totalBalls; i++)
         {
-            Ball ball = Instantiate(ballZonePf, spawnPosition, Quaternion.identity);
+            Ball ball = Instantiate(ballPf, spawnPosition, Quaternion.identity);
             ball.transform.SetParent(ballTF);
             balls.Add(ball);
         }
@@ -80,23 +79,25 @@ public class BallManager : Singleton<BallManager>
 
         Vector3 startingPosition = new Vector3(paddlePosition.x + 1.6f, paddlePosition.y, 0);
 
-        Ball ball = SimplePool.Spawn<Ball>(ballPf);
+        Ball ball = Instantiate(ballPf);
 
         ball.gameObject.SetActive(true);
+
+        ball.transform.position = startingPosition;
 
         ball.transform.SetParent(ballTF);
 
         balls.Add(ball);
-        ball.transform.position = startingPosition;
 
         countBall -= 1;
     }
     public void ClearBalls()
     {
-        foreach(Ball ball in balls)
-        {
-            SimplePool.Despawn(ball);
-        }
-    }
 
+        for(int i = 0; i < balls.Count;i++)
+        {
+            Destroy(balls[i].gameObject);
+        }
+        balls.Clear();
+    }
 }

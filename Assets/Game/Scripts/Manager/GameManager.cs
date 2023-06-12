@@ -51,7 +51,6 @@ public class GameManager : Singleton<GameManager>
     }
     public void UIVictory()
     {
-
         UIManager.Ins.OpenUI<UIVictory>();
     }
     void UIStart()

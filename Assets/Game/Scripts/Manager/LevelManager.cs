@@ -17,6 +17,7 @@ public class LevelManager : Singleton<LevelManager>
         this.currentLevel++;
         if (this.currentLevel >= BallStaticManager.Ins.LevelsData.Count)
         {
+            
             GameManager.Ins.UIVictory();
         }
         else

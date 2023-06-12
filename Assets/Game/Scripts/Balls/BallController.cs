@@ -27,6 +27,15 @@ public class BallController : GameUnit
     [SerializeField] protected MeshRenderer rendererBall;
     [SerializeField] protected SkinnedMeshRenderer skinnedRenderer;
 
+
+ /*   public Vector3 LastFrameVelocity;
+    public Vector3 ContactPoint;
+    public Vector3 ReflectedDirection;
+    public Vector3 Normal;
+    public RaycastHit RaycastHit;
+    public Ray Ray;
+    public LayerMask LayerMaskBall;
+    public float Speed;*/
     public bool hasStarted = false;
 
     private void Start()
@@ -43,7 +52,27 @@ public class BallController : GameUnit
         rb.velocity = initialVelocity;
     }
 
- /*   public virtual void OnCollisionEnter(Collision collision)
+    /*    public virtual void OnTriggerEnter(Collider other)
+        {
+           if (other.CompareTag(Constant.TAG_BALL))
+            {
+                Speed = LastFrameVelocity.magnitude;
+                Vector3 incomingDirection = other.transform.position - transform.position;
+                Debug.DrawRay(transform.position, incomingDirection, Color.red);
+                Ray = new Ray(transform.position, incomingDirection);
+                if (Physics.Raycast(Ray, out RaycastHit, 0.5f, LayerMaskBall))
+                {
+                    Vector3 Normal = RaycastHit.normal;
+                    ReflectedDirection = Vector3.Reflect(incomingDirection.normalized, Normal);
+                    if (rb != null)
+                    {
+                        Debug.Log(1);
+                        rb.velocity = ReflectedDirection.normalized * Speed;
+                    }
+                }
+            }
+        }*/
+    public virtual void OnCollisionEnter(Collision collision)
     {
         if (!hasStarted)
         {
@@ -63,27 +92,8 @@ public class BallController : GameUnit
 
         rb.velocity = direction * Mathf.Max(speed, minVelocity);
 
-    }*/
-    public virtual void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag(Constant.TAG_ZONE_SPAWN))
-        {
-            Vector3 moveDirection = rb.velocity.normalized;
-
-            Ray ray = new Ray(other.ClosestPoint(transform.position), moveDirection);
-
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                Vector3 collisionNormal = -hit.normal;
-
-                Vector3 reflectedDirection = Vector3.Reflect(moveDirection, collisionNormal);
-
-                rb.velocity = reflectedDirection.normalized * rb.velocity.magnitude;
-            }
-        }
     }
+
     public void ChangeColor(MaterialType type)
     {
         materialType = type;

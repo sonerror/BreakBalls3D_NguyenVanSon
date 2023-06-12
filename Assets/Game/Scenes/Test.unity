@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 107961897}
   - component: {fileID: 107961896}
   - component: {fileID: 107961895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere (2)
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -1036,101 +1036,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8792056718250109193, guid: d4292344266c6f4459ad7c56a306ace9, type: 3}
   m_PrefabInstance: {fileID: 314549822}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &353915887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 353915892}
-  - component: {fileID: 353915891}
-  - component: {fileID: 353915890}
-  - component: {fileID: 353915889}
-  m_Layer: 0
-  m_Name: Sphere (1)
-  m_TagString: Ball
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!135 &353915889
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353915887}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &353915890
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353915887}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &353915891
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353915887}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &353915892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353915887}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -4.54, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &398322179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1876,133 +1781,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &654569937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 654569943}
-  - component: {fileID: 654569942}
-  - component: {fileID: 654569941}
-  - component: {fileID: 654569940}
-  - component: {fileID: 654569939}
-  - component: {fileID: 654569938}
-  m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Ball
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &654569938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5b9568ec58cf064a829a23d8eacdb01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LastFrameVelocity: {x: 0, y: 0, z: 0}
-  Speed: 0
---- !u!54 &654569939
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &654569940
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &654569941
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &654569942
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &654569943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654569937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 6.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694020811
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,7 +2333,7 @@ GameObject:
   - component: {fileID: 1117576756}
   - component: {fileID: 1117576755}
   - component: {fileID: 1117576754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere (3)
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -5624,6 +5402,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 712906888550077046}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &305599589347503660
 Transform:
@@ -5761,6 +5547,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 865453890285924941}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &488285568187127977
 Rigidbody:
@@ -5898,6 +5692,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 903936985035643742}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &514338657093821760
 GameObject:
@@ -6148,6 +5950,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 145867276358215099}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &712906888550077033
 Rigidbody:
@@ -6285,6 +6095,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2666742408627114}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &788739970814599939
 Transform:
@@ -6324,6 +6142,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 139203197919519743}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &865453890285924940
 SphereCollider:
@@ -6574,6 +6400,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 488285568187127990}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &949001486515863635
 MonoBehaviour:
@@ -6598,6 +6432,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 525848532128500424}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &956166021778157511
 MonoBehaviour:
@@ -6622,6 +6464,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 514338657093821788}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &1034141898218316981
 MonoBehaviour:
@@ -6646,6 +6496,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 305599589347503662}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &1211148634566586046
 MonoBehaviour:
@@ -6670,6 +6528,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1921184239135286309}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &1354947534459395532
 Rigidbody:
@@ -6807,6 +6673,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1833366958086798318}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &1406411438617299008
 GameObject:
@@ -7076,6 +6950,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2239548131086235331}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &1552921108473254720
 GameObject:
@@ -7661,6 +7543,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1354947534459395539}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &1833366958086798316
 Transform:
@@ -7798,6 +7688,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1406411438617299036}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &1921184239135286308
 SphereCollider:
@@ -7935,6 +7833,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1651494915219971769}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2058155563374856905
 MonoBehaviour:
@@ -7959,6 +7865,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1655000511436636242}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2147053134558717156
 MonoBehaviour:
@@ -7983,6 +7897,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1705855824535252607}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2205672029876581830
 MonoBehaviour:
@@ -8007,6 +7929,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1511987508214792029}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!33 &2239548131086235328
 MeshFilter:
@@ -8144,6 +8074,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 1552921108473254748}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &2390550137875362060
 SphereCollider:
@@ -8281,6 +8219,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2951016273795811816}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2513857132930144985
 MonoBehaviour:
@@ -8305,6 +8251,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2919656475969491010}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &2546489172820445260
 SphereCollider:
@@ -8442,6 +8396,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3378303881905650850}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2648948663262247120
 MonoBehaviour:
@@ -8466,6 +8428,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3361166779078111819}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &2687420864243346245
 MonoBehaviour:
@@ -8490,6 +8460,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3399114561868276190}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &2688021056823589228
 Rigidbody:
@@ -8853,6 +8831,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3301816250324785711}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &2919656475969491008
 Transform:
@@ -9103,6 +9089,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2546489172820445261}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &3119665273379290006
 MonoBehaviour:
@@ -9127,6 +9121,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2390550137875362061}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &3259478021067510067
 MonoBehaviour:
@@ -9151,6 +9153,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2836223621160672168}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!33 &3301816250324785708
 MeshFilter:
@@ -9514,6 +9524,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2688021056823589235}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &3399114561868276161
 Rigidbody:
@@ -9651,6 +9669,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 2733017603865012672}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &3490012740018562724
 Transform:
@@ -9788,6 +9814,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4236750426037731777}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &3581425100721147301
 GameObject:
@@ -10038,6 +10072,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4105772775591943225}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &3656487825582179535
 MonoBehaviour:
@@ -10062,6 +10104,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4096520750916914772}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &3667506358180750829
 GameObject:
@@ -10305,6 +10355,63 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &3766697836725753397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409473, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766697836945409498, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
+      propertyPath: m_Name
+      value: Sphere (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b61e195d99e2abd488e94e7d2f758511, type: 3}
 --- !u!33 &3772002283157890568
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10441,6 +10548,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4511930314170105271}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &3817554700074180201
 GameObject:
@@ -10578,6 +10693,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4574304399297658316}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &3867178390100479912
 Rigidbody:
@@ -10715,6 +10838,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4343720376783257896}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &3901924477634983485
 MonoBehaviour:
@@ -10739,6 +10870,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4341993430900227238}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &3962021840395752290
 MonoBehaviour:
@@ -10763,6 +10902,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4367465216948460025}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &3997498488645605185
 GameObject:
@@ -11239,6 +11386,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3490012740018562726}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &4236750426037731776
 SphereCollider:
@@ -11376,6 +11531,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3589096963285894961}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4311194445775128354
 MonoBehaviour:
@@ -11400,6 +11563,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3581425100721147321}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &4341993430900227236
 Transform:
@@ -11763,6 +11934,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3997498488645605213}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4456331656330459943
 MonoBehaviour:
@@ -11787,6 +11966,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4017111504566432188}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4485426562830707856
 MonoBehaviour:
@@ -11811,6 +11998,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3772002283157890571}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4487263251355809825
 MonoBehaviour:
@@ -11835,6 +12030,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3756637065019437754}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4501472353606516143
 MonoBehaviour:
@@ -11859,6 +12062,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3755939312487872308}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4511791405017715950
 MonoBehaviour:
@@ -11883,6 +12094,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3817554700074180213}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &4511930314170105256
 Rigidbody:
@@ -12133,6 +12352,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 3867178390100479927}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &4647485269936942475
 MonoBehaviour:
@@ -12157,6 +12384,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5339185154454005520}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &4762239437157019565
 Rigidbody:
@@ -12377,6 +12612,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5680416759874962581}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &4961714448789799845
 GameObject:
@@ -12966,6 +13209,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4762239437157019570}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!136 &5301733321654164429
 CapsuleCollider:
@@ -13117,6 +13368,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5055277176643522213}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &5591160228545907102
 MonoBehaviour:
@@ -13141,6 +13400,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5183780868106470149}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &5611614975910461973
 MonoBehaviour:
@@ -13165,6 +13432,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5154301260665538702}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1839735485 &5614459575542763881
 Tilemap:
@@ -13227,6 +13502,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4961714448789799865}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &5680416759874962569
 GameObject:
@@ -13364,6 +13647,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 4989143957522766303}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &5784512397983117348
 SphereCollider:
@@ -13501,6 +13792,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6540963629718007406}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &5866030089640589996
 GameObject:
@@ -13638,6 +13937,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6355124751181893855}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &6185678027341261800
 MonoBehaviour:
@@ -13662,6 +13969,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6895088829995934067}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &6224200396220996873
 Rigidbody:
@@ -13799,6 +14114,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6633295952203356462}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &6355124751181893824
 Rigidbody:
@@ -13936,6 +14259,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5784512397983117349}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &6540963629718007404
 Transform:
@@ -14073,6 +14404,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 5866030089640590000}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &6631404141760452493
 MonoBehaviour:
@@ -14097,6 +14436,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6224200396220996886}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &6633295952203356460
 Transform:
@@ -14460,6 +14807,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7730766417004863855}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &7020655131939384360
 Rigidbody:
@@ -14823,6 +15178,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7972010651351767492}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7280939713633556227
 MonoBehaviour:
@@ -14847,6 +15210,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8028985411279723928}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7299593136972860659
 MonoBehaviour:
@@ -14871,6 +15242,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8010473197874120296}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7324913361249401028
 MonoBehaviour:
@@ -14895,6 +15274,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8052689306088567391}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7352282052337640815
 MonoBehaviour:
@@ -14919,6 +15306,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7813527874834935796}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7358456718703101546
 MonoBehaviour:
@@ -14943,6 +15338,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7816501557504249073}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7412629120508329928
 MonoBehaviour:
@@ -14967,6 +15370,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7834369234937050451}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7435595444055607786
 MonoBehaviour:
@@ -14991,6 +15402,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7878833211705656177}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7460122917864229348
 MonoBehaviour:
@@ -15015,6 +15434,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7917356605119316863}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7470150494148759446
 MonoBehaviour:
@@ -15039,6 +15466,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7911973443334341901}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!54 &7483567862269062913
 Rigidbody:
@@ -15176,6 +15611,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 6928831552853786163}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &7712932248524400300
 MonoBehaviour:
@@ -15200,6 +15643,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7020655131939384375}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!33 &7730766417004863852
 MeshFilter:
@@ -15337,6 +15788,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7041019242230886084}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!1 &7813527874834935784
 GameObject:
@@ -15827,6 +16286,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7483567862269062942}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &7911973443334341900
 SphereCollider:
@@ -16190,6 +16657,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 7248576887101098809}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!23 &8010473197874120296
 MeshRenderer:
@@ -17005,6 +17480,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8657594845733619247}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!4 &8324327365464337024
 Transform:
@@ -17142,6 +17625,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 9110139709791933238}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8383413433825776301
 MonoBehaviour:
@@ -17166,6 +17657,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 9092883916927981622}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &8474230251507277316
 SphereCollider:
@@ -17868,6 +18367,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 9011690739585885793}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!33 &8657594845733619244
 MeshFilter:
@@ -18005,7 +18512,72 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8324327365464337026}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
+--- !u!1001 &8784819494091863282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8784819493638915363, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_Name
+      value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.947
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784819493638915365, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 452c53a678f43384e8ec9acca92c29d9, type: 3}
 --- !u!114 &8820809627644505661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18029,6 +18601,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8074523372344452262}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8835340000151732802
 MonoBehaviour:
@@ -18053,6 +18633,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8141058205438347481}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8856644665204905152
 MonoBehaviour:
@@ -18077,6 +18665,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8110605525274795611}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8883409773811995539
 MonoBehaviour:
@@ -18101,6 +18697,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8155880084553242888}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8952975963899616132
 MonoBehaviour:
@@ -18125,6 +18729,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8527824909255987487}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8966669916058376848
 MonoBehaviour:
@@ -18149,6 +18761,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8509469449707966475}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8973776844055455714
 MonoBehaviour:
@@ -18173,6 +18793,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8570057450197855609}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &8999451509331568967
 MonoBehaviour:
@@ -18197,6 +18825,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8539896718407836636}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!135 &9011690739585885792
 SphereCollider:
@@ -18649,6 +19285,14 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8487961026612054831}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
 --- !u!114 &9222584946277962910
 MonoBehaviour:
@@ -18673,4 +19317,12 @@ MonoBehaviour:
   colorData: {fileID: 0}
   rendererBall: {fileID: 8474230251507277317}
   skinnedRenderer: {fileID: 0}
+  LastFrameVelocity: {x: 0, y: 0, z: 0}
+  ContactPoint: {x: 0, y: 0, z: 0}
+  ReflectedDirection: {x: 0, y: 0, z: 0}
+  Normal: {x: 0, y: 0, z: 0}
+  LayerMaskBall:
+    serializedVersion: 2
+    m_Bits: 0
+  Speed: 0
   hasStarted: 0
